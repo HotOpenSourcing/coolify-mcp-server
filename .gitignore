@@ -6,13 +6,10 @@ build/
 dist/
 
 # Environment files
-.env
-.env.local
 .env.*.local
 
 # IDE
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
@@ -39,3 +36,4 @@ tmp/
 temp/
 *.tmp
 coolify-source
+config.bat

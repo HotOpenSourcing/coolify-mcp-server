@@ -1,6 +1,6 @@
 {
   "name": "coolify-mcp-server-kof70",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "MCP server for Coolify API - Control your self-hosted PaaS from AI assistants",
   "type": "module",
   "main": "build/index.js",
@@ -10,9 +10,9 @@
     "coolify-mcp-server-kof70": "build/cli.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node build/index.js",
-    "dev": "tsx src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node build/index.js",
+    "dev": "node init && tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -50,7 +50,9 @@
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.5.0",
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
